@@ -7,13 +7,13 @@ Gem::Specification.new do |s|
   s.description = 'adds a simple wait list'
   s.required_ruby_version = '>= 2.1.0'
 
-  # s.author    = 'You'
-  # s.email     = 'you@example.com'
-  # s.homepage  = 'http://www.spreecommerce.com'
+   s.author    = 'poulping'
+   s.email     = 'arnaud@godynamo.com'
+   s.homepage  = 'http://www.spreecommerce.com'
   s.license = 'BSD-3'
 
-  # s.files       = `git ls-files`.split("\n")
-  # s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
+   s.files       = `git ls-files`.split("\n")
+   s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_path = 'lib'
   s.requirements << 'none'
 
