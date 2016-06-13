@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe 'Adds a user to the list' do
+RSpec.describe 'Adding a user to the list' do
 
   let(:user) { create(:user, email: 'user@example.com') }
   let(:product) { create(:variant, sku: 'SKU-1234') }
