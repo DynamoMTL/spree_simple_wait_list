@@ -5,8 +5,8 @@ module Spree
 
     scope :pending, -> { where(notified: false) }
 
-    def self.for_user(user)
-      joins(:user).where(user: { id: user.id } )
+    def self.for_user(email)
+      joins(:user).where(user: { email: email } )
     end
 
     def self.in_stock
