@@ -10,11 +10,10 @@ RSpec.describe 'Retrieving a users wait list' do
   it 'returns products in stock only', :focus do
     product_in_stock.stock_items.first.adjust_count_on_hand 10
     product_in_stock.save
-    SimpleWaitList::add(user_email: user, spree_variant: product_in_stock)
-    SimpleWaitList::add(user_email: user, spree_variant: product_out_of_stock)
+    SimpleWaitList::add(user_email: user.email, spree_variant: product_in_stock)
+    SimpleWaitList::add(user_email: user.email, spree_variant: product_out_of_stock)
 
     list = Spree::SimpleWaitList.in_stock
-
     expect(list.count).to eq(1)
     expect(list.first.variant_id).to eq(2)
 
