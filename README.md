@@ -1,18 +1,22 @@
 SpreeSimpleWaitList
 ===================
 
-Introduction goes here.
+This spree extension adds a simple wait list feature: add a client to a list and when the product is back in stock,
+they get a notification.
+
+Run
+```ruby
+bundle exec rake spree_simple_wait_list:notify
+```
+to trigger the email.
+
 
 ## Installation
 
 1. Add this extension to your Gemfile with this line:
   ```ruby
-  gem 'spree_simple_wait_list', github: '[your-github-handle]/spree_simple_wait_list', branch: 'X-X-stable'
+  gem 'spree_simple_wait_list', git: 'https://github.com/DynamoMTL/spree_simple_wait_list.git'
   ```
-
-  The `branch` option is important: it must match the version of Spree you're using.
-  For example, use `3-1-stable` if you're using Spree `3-1-stable` or any `3.1.x` version.
-
 2. Install the gem using Bundler:
   ```ruby
   bundle install
