@@ -3,7 +3,7 @@ require 'spree_simple_wait_list/engine'
 
 module SimpleWaitList
   def self.add(user_email:, spree_variant:)
-    Spree::SimpleWaitList.find_or_create_by(email: user_email, variant_id: spree_variant.id)
+    Spree::SimpleWaitList.find_or_create_by(email: user_email, variant_id: spree_variant.id).valid?
   end
 
   def self.in_stock
