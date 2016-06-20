@@ -7,7 +7,7 @@ RSpec.describe 'Retrieving a users wait list' do
   let(:product_out_of_stock) { create(:variant, sku: 'SKU-5678') }
   let(:product_in_stock_and_notified) { create(:variant, sku: 'SKU-ABCD') }
 
-  it 'returns products in stock only', :focus do
+  it 'returns products in stock only' do
     product_in_stock.stock_items.first.adjust_count_on_hand 10
     product_in_stock.save
     SimpleWaitList::add(user_email: user.email, spree_variant: product_in_stock)
