@@ -12,7 +12,7 @@ module Spree
     end
 
     def self.in_stock
-      joins(:variant).pending.merge(Spree::Variant.in_stock)
+      joins(:variant).pending.merge(Spree::Variant.in_stock).group('spree_simple_wait_lists.id')
     end
   end
 end
